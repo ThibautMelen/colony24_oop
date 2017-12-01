@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Action Pearl harbor</title>
+	<link rel="stylesheet" href="css/pixel_studio.css">
+</head>
+
+<body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="app/Game.js"></script>
+	<script src="app/Fleet.class.js"></script>
+	<script src="app/Inventory.class.js"></script>
+
+	<h1>Main harbor</h1>
+	<p id="demo"></p>
+	
+	<input id="expedition" type="button" value="Envoyer en expe" onclick="colony24.Expedition();" />
+
+	<script>
+		let colony24;
+
+		$(function()
+		{
+			const config = {
+				boat: 5
+				// colors: ['#E7BDDF', '#D593D4', '#C0E3C1', '#8AA58B', '#91FF96', '#000000']
+			}
+			colony24 = new Game(config);
+		});
+	</script>
+</body>
+
+</html>
