@@ -6,8 +6,12 @@ class Game {
 
 		// Creation des environment
 		this.wallet = new Wallet(config.gold, config.ecu);
-		this.fleet = new Fleet(config.fleet, this.wallet);
-		this.inventory = new Inventory(this.wallet);
+		//obliger de mettre un setTimeout sinon bug de synchro
+		setTimeout(function() {
+			console.log("A");
+			this.fleet = new Fleet(config.fleet);
+			this.inventory = new Inventory();
+		}, 1);
 	}
 
 

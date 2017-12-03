@@ -1,19 +1,22 @@
 class Fleet
 {
-  constructor(fleet, wallet)
+  constructor(fleet)
   {
+    //obliger de mettre un setTimeout sinon bug de synchro
     console.log(`▪️▪️▪️\n`);
     // Wallet
-    this.goldValue = wallet.goldValue;
-    this.gold = wallet.gold;
-    this.ecu = wallet.ecu;
+    this.goldValue = colony24.wallet.goldValue;
+    this.gold = colony24.wallet.gold;
+    this.ecu = colony24.wallet.ecu;
+    console.log(`////////////////////TEST ${this.ecu }\n▪️▪️▪️`);
     // Fleet
     this.fleet = fleet;
     this.allBoat = [];
     this.allBoat.push(this.fleet);
     // Pour creer un bateau
     this.createBoat("TEST", 1000, 1000, 1000, 1000);
-
+    console.log("B");
+    this.ecu--;
     console.log(`[[FLEET]] Creation Root Boat${this.allBoat}`);
     console.log(`[[FLEET]] goldValue is ${this.goldValue} \n[[[FLEET]] gold is ${this.gold } \n[[FLEET]] ecu is ${this.ecu } \n▪️▪️▪️`);
     console.log(`\n▪️▪️▪️`);

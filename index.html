@@ -47,14 +47,17 @@
 					ecu : 300
 			}
 			colony24 = new Game(config);
-			
-			console.log(`//TEST ${colony24.ecu}\n▪️▪️▪️`);
-			console.log(`//TEST ${colony24.fleet.ecu}\n▪️▪️▪️`);
+			setTimeout(function() {
+				console.log("C");
+
+			// console.log(`//TEST ${colony24.fleet.ecu}\n▪️▪️▪️`);
 			console.log(`//TEST ${colony24.wallet.ecu}\n▪️▪️▪️`);
 			colony24.wallet.ecu--;
-			console.log(`//TEST ${colony24.ecu}\n▪️▪️▪️`);
 			console.log(`//TEST ${colony24.fleet.ecu}\n▪️▪️▪️`);
+			console.log(`//TEST ${colony24.fleet.allBoat}\n▪️▪️▪️`);
 			console.log(`//TEST ${colony24.wallet.ecu}\n▪️▪️▪️`);
+
+		}, 200);
 
 		});
 	</script>
