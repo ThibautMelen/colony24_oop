@@ -3,16 +3,17 @@ class Game {
 	{
 		console.log("Game Colony 24 starting...");
 
-		this.fleet = new Fleet("clickMe");
+		//Creation des bateaux
+		this.fleet = new Fleet(config.fleet);
 		this.inventory = new Inventory("clickMe");
 		// this.color_selector = new Color_selector("colors", config.colors);
-		// this.drawing_tool = new Drawing_tool("tools");
 
-		let or = 200;
-		let ecu = 300;
-		let tauxChange = 1.2;
-		let boat = [];
+		console.log(`gold is ${config.fleet}`);
+		config.gold += 100;
+		console.log(`gold is ${config.gold}`);
 
+		this.goldValue = 1.2;
+		this.boar = [];
 	}
 
 	BuyEquipment(){
@@ -27,7 +28,7 @@ class Game {
 					window.bato = bato;
 					boat.push(bato);
 					document.getElementById("demo").innerHTML  = "Vous avez : " + boat.length + " embarcation(s) disponible";
-					ecu -=100;
+					ecu -= 100;
 					console.log("Vous acheter un bateau pour 100 écu");
 
 			}else{
@@ -54,6 +55,4 @@ class Game {
 	Expedition(){
 	    console.log("Vous envoyer un bateau en mission")
 	}
-
-
 }

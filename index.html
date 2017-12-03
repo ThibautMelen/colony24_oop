@@ -16,17 +16,33 @@
 
 	<h1>Main harbor</h1>
 	<p id="demo"></p>
-	
-	<input id="expedition" type="button" value="Envoyer en expe" onclick="colony24.Expedition();" />
+
+	<!-- <input id="expedition" type="button" value="Envoyer en expe" onclick="colony24.Expedition();" /> -->
 
 	<script>
 		let colony24;
 
 		$(function()
 		{
-			const config = {
-				boat: 5
-				// colors: ['#E7BDDF', '#D593D4', '#C0E3C1', '#8AA58B', '#91FF96', '#000000']
+			let config =
+			{
+				fleet: [
+								["Sous-Marin",
+									100,//Structure (Sante du Bateau)
+								  50,//Blindage (Bouclier)
+									50,//Capacite (Nb Equipements Embarquables)
+									10//Poids  (Poids du bataeau et equipement)
+								 ],
+								 ["Plateforme",
+									200,//Structure (Sante du Bateau)
+									1000,//Blindage (Bouclier)
+									500,//Capacite (Nb Equipements Embarquables)
+									5000//Poids  (Poids du bataeau et equipement)
+								 ]
+							 ],
+
+					gold : 100,
+					ecu : 300
 			}
 			colony24 = new Game(config);
 		});
