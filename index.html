@@ -10,9 +10,10 @@
 <body>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="app/Game.js"></script>
-	<script src="app/Fleet.class.js"></script>
-	<script src="app/Inventory.class.js"></script>
+	<script src="app/game.js"></script>
+	<script src="app/wallet.class.js"></script>
+	<script src="app/fleet.class.js"></script>
+	<script src="app/inventory.class.js"></script>
 
 	<h1>Main harbor</h1>
 	<p id="demo"></p>
@@ -24,6 +25,7 @@
 
 		$(function()
 		{
+			//JSON TABLE A MODIF
 			let config =
 			{
 				fleet: [
@@ -31,7 +33,7 @@
 									100,//Structure (Sante du Bateau)
 								  50,//Blindage (Bouclier)
 									50,//Capacite (Nb Equipements Embarquables)
-									10//Poids  (Poids du bataeau et equipement)
+									10//Poids (Poids du bataeau et equipement)
 								 ],
 								 ["Plateforme",
 									200,//Structure (Sante du Bateau)
@@ -45,8 +47,16 @@
 					ecu : 300
 			}
 			colony24 = new Game(config);
+			
+			console.log(`//TEST ${colony24.ecu}\n▪️▪️▪️`);
+			console.log(`//TEST ${colony24.fleet.ecu}\n▪️▪️▪️`);
+			console.log(`//TEST ${colony24.wallet.ecu}\n▪️▪️▪️`);
+			colony24.wallet.ecu--;
+			console.log(`//TEST ${colony24.ecu}\n▪️▪️▪️`);
+			console.log(`//TEST ${colony24.fleet.ecu}\n▪️▪️▪️`);
+			console.log(`//TEST ${colony24.wallet.ecu}\n▪️▪️▪️`);
+
 		});
 	</script>
 </body>
-
 </html>
